@@ -323,10 +323,10 @@ jobs:
                   issues.push(`❌ **${file.filename}**: Missing metadata export (SEO)`);
                 }
                 
-                // Check for proper phone numbers
-                if (content.includes('702-222-1964') || content.includes('7022221964') || 
+                // Check for proper phone numbers (searchforhomesinsummerlin.com CTA line)
+                if (content.includes('702-500-1942') || content.includes('7025001942') ||
                     content.includes('702-500-1955') || content.includes('7025001955')) {
-                  issues.push(`❌ **${file.filename}**: Contains old phone number (should be (702) 500-1942)`);
+                  issues.push(`❌ **${file.filename}**: Contains wrong phone number (should be (702) 222-1964)`);
                 }
                 
                 // Check for JSON-LD schema

@@ -4,6 +4,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function RealScoutListings() {
+  const realScoutAgentEncodedId =
+    process.env.NEXT_PUBLIC_REALSCOUT_AGENT_ID?.trim() || "QWdlbnQtMjI1MDUw";
+  const realScoutHomeSearchUrl =
+    process.env.NEXT_PUBLIC_REALSCOUT_URL?.trim() || "https://drjanduffy.realscout.com/";
+
   return (
     <section className="py-16 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4">
@@ -17,7 +22,9 @@ export default function RealScoutListings() {
             </p>
           </div>
           <Button asChild variant="outline" className="mt-4 md:mt-0">
-            <a href="http://drjanduffy.realscout.com/" target="_blank" rel="noopener noreferrer">View All Properties</a>
+            <a href={realScoutHomeSearchUrl} target="_blank" rel="noopener noreferrer">
+              View All Properties
+            </a>
           </Button>
         </div>
 
@@ -25,7 +32,7 @@ export default function RealScoutListings() {
         <div
           dangerouslySetInnerHTML={{
             __html: `<realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
+              agent-encoded-id="${realScoutAgentEncodedId}" 
               sort-order="NEWEST" 
               listing-status="For Sale" 
               property-types=",SFR,MF,TC" 

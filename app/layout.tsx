@@ -2,26 +2,41 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { headers } from "next/headers";
-import { getDomainConfig } from "@/lib/domain-config";
+import { SITE_DOMAIN_CONFIG } from "@/lib/domain-config";
+import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import GlobalHeroBanner from "@/components/layout/GlobalHeroBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const domain = headers().get("x-domain") || "";
-  const config = getDomainConfig(domain);
+  const headersList = headers();
+  const pathname = headersList.get("x-pathname") || "/";
+  const siteUrl = getSiteUrl();
+  const canonical = absoluteUrl(pathname);
+  const config = SITE_DOMAIN_CONFIG;
+
   return {
-    title: `${config.neighborhood} | Dr. Jan Duffy, REALTOR® | BHHS Nevada`,
+    metadataBase: new URL(siteUrl),
+    title: config.title,
     description: config.description,
     keywords: config.keywords,
+    alternates: {
+      canonical,
+    },
     openGraph: {
-      title: config.heroHeadline,
+      title: config.title,
       description: config.description,
       type: "website",
+      url: canonical,
     },
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={GeistSans.className}>
       <head>
@@ -37,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}</Script>
       </head>
       <body>
+        <GlobalHeroBanner />
         {children}
         <Analytics />
       </body>
