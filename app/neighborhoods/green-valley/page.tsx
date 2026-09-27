@@ -86,7 +86,7 @@ export default function GreenValleyPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Green Valley
+              Green Valley Homes for Sale & Neighborhood Guide
             </h1>
             <p className="text-xl text-slate-600">
               Henderson's original master-planned community. Find your Green Valley home with{" "}

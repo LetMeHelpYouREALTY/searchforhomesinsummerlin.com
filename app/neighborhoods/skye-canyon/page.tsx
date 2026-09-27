@@ -86,7 +86,7 @@ export default function SkyeCanyonPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Skye Canyon
+              Skye Canyon Homes for Sale & Neighborhood Guide
             </h1>
             <p className="text-xl text-slate-600">
               Northwest Las Vegas's fastest-growing community. Discover Skye Canyon with{" "}

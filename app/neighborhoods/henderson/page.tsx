@@ -102,7 +102,7 @@ export default function HendersonPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Henderson
+              Henderson Homes for Sale & Neighborhood Guide
             </h1>
             <p className="text-xl text-slate-600">
               Nevada's safest city. Find your Henderson home with Dr. Jan Duffy, your trusted{" "}

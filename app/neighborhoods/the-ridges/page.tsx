@@ -86,7 +86,7 @@ export default function TheRidgesPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices The Ridges
+              The Ridges Homes for Sale & Neighborhood Guide
             </h1>
             <p className="text-xl text-slate-600">
               Las Vegas's most prestigious address. Experience The Ridges luxury with{" "}

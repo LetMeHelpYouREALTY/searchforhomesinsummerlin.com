@@ -86,7 +86,7 @@ export default function MountainsEdgePage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Berkshire Hathaway HomeServices Mountains Edge
+              Mountains Edge Homes for Sale & Neighborhood Guide
             </h1>
             <p className="text-xl text-slate-600">
               Affordable luxury in southwest Las Vegas. Find your Mountains Edge home with{" "}
