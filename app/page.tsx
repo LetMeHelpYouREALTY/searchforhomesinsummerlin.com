@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/layouts/Navbar";
 import RealScoutListings from "@/components/realscout/RealScoutListings";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -8,8 +9,23 @@ import Link from "next/link";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getFaqsForDomain } from "@/lib/faq-config";
-import { SISTER_LINKS } from "@/lib/domain-config";
+import { SITE_DOMAIN_CONFIG, SISTER_LINKS } from "@/lib/domain-config";
 import { getSiteUrl } from "@/lib/site-url";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const siteUrl = getSiteUrl();
+  const config = SITE_DOMAIN_CONFIG;
+  return {
+    title: config.title,
+    description: config.description,
+    alternates: { canonical: siteUrl },
+    openGraph: {
+      title: config.title,
+      description: config.description,
+      url: siteUrl,
+    },
+  };
+}
 
 // Maps pageType → human-readable FAQ section title/subtitle
 const FAQ_SECTION_COPY: Record<
