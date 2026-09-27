@@ -82,7 +82,7 @@ export default function MarketUpdatePage() {
               Week of January 20, 2026
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              Berkshire Hathaway HomeServices Las Vegas Market Update
+              Summerlin Market Update
             </h1>
             <p className="text-xl text-slate-600">
               Your weekly insider report on Las Vegas Valley real estate from{" "}

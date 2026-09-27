@@ -130,7 +130,7 @@ export default function AboutPage() {
               Berkshire Hathaway HomeServices Nevada Properties
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Meet Your Berkshire Hathaway HomeServices Agent
+              Meet Dr. Jan Duffy, REALTOR®
             </h1>
             <p className="text-xl text-slate-600">
               Dr. Jan Duffy has been serving Las Vegas since 2008—backed by the most

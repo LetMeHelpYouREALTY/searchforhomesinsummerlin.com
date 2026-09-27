@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "https://searchforhomesinsummerlin.com/why-berkshire-hathaway" },
   openGraph: { url: "https://searchforhomesinsummerlin.com/why-berkshire-hathaway" },
-  title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
+  title: "Why Work With Dr. Jan Duffy's Brokerage | Summerlin Real Estate",
   description:
     "Discover why Berkshire Hathaway HomeServices is the most trusted name in real estate. Backed by Warren Buffett, with 50,000+ agents worldwide. Work with BHHS Nevada Properties today.",
   keywords: [
@@ -52,7 +52,7 @@ export default function WhyBerkshireHathawayPage() {
               The Most Trusted Name in Real Estate
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Why Choose Berkshire Hathaway HomeServices?
+              Why My Brokerage Matters When You Buy or Sell in Summerlin
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed">
               When you work with a <strong>Berkshire Hathaway HomeServices</strong> agent, you're
