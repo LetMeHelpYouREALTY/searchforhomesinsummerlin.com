@@ -20,7 +20,7 @@ const nextConfig = {
   // Performance optimizations
   swcMinify: true,
 
-  // Redirect non-www to www
+  // www → apex (matches heyberkshire-com Vercel primary host pattern)
   async redirects() {
     return [
       {
@@ -28,10 +28,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'heyberkshire.com',
+            value: 'www.searchforhomesinsummerlin.com',
           },
         ],
-        destination: 'https://www.heyberkshire.com/:path*',
+        destination: 'https://searchforhomesinsummerlin.com/:path*',
         permanent: true,
       },
     ]

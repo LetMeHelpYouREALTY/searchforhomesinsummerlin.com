@@ -12,9 +12,9 @@ export type GlobalHeroConfig = {
 };
 
 export const GLOBAL_HERO: GlobalHeroConfig = {
-  src: "/images/global-hero/heyberkshire.jpg",
-  alt: "Las Vegas Valley desert skyline and residential rooftops at dusk, Las Vegas, NV",
-  tagline: "HeyBerkshire — Las Vegas Real Estate by Dr. Jan Duffy",
+  src: "/Image/hero_bg_1.jpg",
+  alt: "Summerlin area homes and desert landscape near Las Vegas, Nevada",
+  tagline: "Summerlin homes for sale — search by village with Dr. Jan Duffy",
   phoneDisplay: "(702) 222-1964",
   phoneTel: "tel:+17022221964",
 };

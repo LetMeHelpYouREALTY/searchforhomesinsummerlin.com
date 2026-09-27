@@ -8,6 +8,8 @@ import Link from "next/link";
 import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getFaqsForDomain } from "@/lib/faq-config";
+import { SISTER_LINKS } from "@/lib/domain-config";
+import { getSiteUrl } from "@/lib/site-url";
 
 // Maps pageType → human-readable FAQ section title/subtitle
 const FAQ_SECTION_COPY: Record<
@@ -58,7 +60,7 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: `Dr. Jan Duffy - ${config.neighborhood} Real Estate`,
-    url: `https://${config.domain !== "default" ? config.domain : "heyberkshire.com"}`,
+    url: getSiteUrl(),
     telephone: "+17022221964",
     address: {
       "@type": "PostalAddress",
@@ -66,11 +68,6 @@ export default async function Home() {
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89134",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "200",
     },
   };
 
@@ -139,8 +136,8 @@ export default async function Home() {
                 <span>Las Vegas Experience</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-semibold text-white">4.9★</span>
-                <span>Client Rating</span>
+                <span className="font-semibold text-white">MLS</span>
+                <span>Property Search</span>
               </div>
             </div>
           </div>
@@ -217,6 +214,23 @@ export default async function Home() {
           title={faqTitle}
           subtitle={faqCopy.subtitle}
         />
+
+        <section className="py-12 bg-white border-t border-slate-200">
+          <div className="container mx-auto px-4 text-center max-w-2xl">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              More Summerlin home searches
+            </h2>
+            <ul className="space-y-2 text-blue-700">
+              {SISTER_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="underline hover:text-blue-900">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         {/* Domain-Specific CTA */}
         <section className="py-16 md:py-20 bg-blue-600 text-white">
