@@ -12,7 +12,13 @@ export interface DomainConfig {
   heroHeadline: string;
   heroSubheadline: string;
   keywords: string[];
-  pageType: "community" | "search" | "lifestyle" | "investment" | "55plus" | "luxury";
+  pageType:
+    | "community"
+    | "search"
+    | "lifestyle"
+    | "investment"
+    | "55plus"
+    | "luxury";
   realscoutAgentId: string;
   ctaBadge: string;
   ctaHeadline: string;
@@ -52,7 +58,10 @@ export const SITE_DOMAIN_CONFIG: DomainConfig = {
 };
 
 export const SISTER_LINKS: ReadonlyArray<{ href: string; label: string }> = [
-  { href: "https://summerlinwesthomes.com", label: "Summerlin West homes for sale" },
+  {
+    href: "https://summerlinwesthomes.com",
+    label: "Summerlin West homes for sale",
+  },
   { href: "https://westsummerlinhomes.com", label: "moving to West Summerlin" },
 ];
 

@@ -6,7 +6,13 @@ import ReviewsSection from "@/components/sections/ReviewsSection";
 import FAQSection from "@/components/sections/FAQSection";
 import Footer from "@/components/layouts/Footer";
 import Link from "next/link";
-import { Phone, Home as HomeIcon, TrendingUp, Shield, Users } from "lucide-react";
+import {
+  Phone,
+  Home as HomeIcon,
+  TrendingUp,
+  Shield,
+  Users,
+} from "lucide-react";
 import { getPageDomainConfig } from "@/lib/get-domain-config";
 import { getFaqsForDomain } from "@/lib/faq-config";
 import { SITE_DOMAIN_CONFIG, SISTER_LINKS } from "@/lib/domain-config";
@@ -28,10 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 // Maps pageType → human-readable FAQ section title/subtitle
-const FAQ_SECTION_COPY: Record<
-  string,
-  { title: string; subtitle: string }
-> = {
+const FAQ_SECTION_COPY: Record<string, { title: string; subtitle: string }> = {
   community: {
     title: "Community Real Estate FAQ",
     subtitle: "Common questions from buyers and sellers in this neighborhood",
@@ -63,7 +66,8 @@ export default async function Home() {
 
   // ── Domain-aware FAQs ────────────────────────────────────────────────────
   const faqs = getFaqsForDomain(config.pageType, config.domain);
-  const faqCopy = FAQ_SECTION_COPY[config.pageType] ?? FAQ_SECTION_COPY["search"];
+  const faqCopy =
+    FAQ_SECTION_COPY[config.pageType] ?? FAQ_SECTION_COPY["search"];
 
   // Personalise the FAQ title with the neighborhood name for community/55+ pages
   const faqTitle =
@@ -167,15 +171,32 @@ export default async function Home() {
                 Why Work With Dr. Jan Duffy?
               </h2>
               <p className="text-lg text-slate-600">
-                Berkshire Hathaway HomeServices Nevada Properties — the most trusted name in Las Vegas real estate.
+                Berkshire Hathaway HomeServices Nevada Properties — the most
+                trusted name in Las Vegas real estate.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {[
-                { icon: Shield, title: "Trusted Brand", desc: "Backed by Warren Buffett's Berkshire Hathaway — unmatched integrity" },
-                { icon: Users, title: "50K+ Network", desc: "Global referral network for seamless moves to or from any market" },
-                { icon: TrendingUp, title: "$127M+ Sold", desc: "Proven results across every Las Vegas neighborhood since 2008" },
-                { icon: HomeIcon, title: "Full Service", desc: "Buying, selling, 55+, luxury, investment — one expert handles it all" },
+                {
+                  icon: Shield,
+                  title: "Trusted Brand",
+                  desc: "Backed by Warren Buffett's Berkshire Hathaway — unmatched integrity",
+                },
+                {
+                  icon: Users,
+                  title: "50K+ Network",
+                  desc: "Global referral network for seamless moves to or from any market",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "$127M+ Sold",
+                  desc: "Proven results across every Las Vegas neighborhood since 2008",
+                },
+                {
+                  icon: HomeIcon,
+                  title: "Full Service",
+                  desc: "Buying, selling, 55+, luxury, investment — one expert handles it all",
+                },
               ].map(({ icon: Icon, title, desc }) => (
                 <div key={title} className="text-center p-6">
                   <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -206,14 +227,21 @@ export default async function Home() {
                 { value: "2.1", label: "Months Inventory", sub: "" },
               ].map(({ value, label, sub }) => (
                 <div key={label} className="text-center">
-                  <div className="text-4xl font-bold text-blue-400 mb-1">{value}</div>
+                  <div className="text-4xl font-bold text-blue-400 mb-1">
+                    {value}
+                  </div>
                   <div className="text-slate-300 text-sm">{label}</div>
-                  {sub && <div className="text-green-400 text-xs mt-1">{sub}</div>}
+                  {sub && (
+                    <div className="text-green-400 text-xs mt-1">{sub}</div>
+                  )}
                 </div>
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link href="/market-report" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition-colors">
+              <Link
+                href="/market-report"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-semibold transition-colors"
+              >
                 Full Market Report
               </Link>
             </div>
@@ -225,11 +253,7 @@ export default async function Home() {
         <ReviewsSection />
 
         {/* Domain-Aware FAQ with FAQPage schema already injected above */}
-        <FAQSection
-          faqs={faqs}
-          title={faqTitle}
-          subtitle={faqCopy.subtitle}
-        />
+        <FAQSection faqs={faqs} title={faqTitle} subtitle={faqCopy.subtitle} />
 
         <section className="py-12 bg-white border-t border-slate-200">
           <div className="container mx-auto px-4 text-center max-w-2xl">
@@ -273,7 +297,8 @@ export default async function Home() {
               </Link>
             </div>
             <p className="mt-6 text-blue-200 text-sm">
-              Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway HomeServices Nevada Properties
+              Dr. Jan Duffy | License S.0197614.LLC | Berkshire Hathaway
+              HomeServices Nevada Properties
             </p>
           </div>
         </section>
