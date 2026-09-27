@@ -14,9 +14,11 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Del Webb at Lake Las Vegas Homes | Berkshire Hathaway HomeServices",
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/55-plus-communities/del-webb-lake-las-vegas" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/55-plus-communities/del-webb-lake-las-vegas" },
+  title: "Del Webb at Lake Las Vegas Homes | Dr. Jan Duffy",
   description:
-    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 500-1942.",
+    "Lakefront 55+ living at Del Webb Lake Las Vegas. Homes from $400K-$900K. Resort amenities, stunning lake and mountain views. Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Del Webb Lake Las Vegas",
     "Lake Las Vegas 55 plus",
@@ -268,11 +270,11 @@ export default function DelWebbLakeLasVegasPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <Link
                 href="/contact"

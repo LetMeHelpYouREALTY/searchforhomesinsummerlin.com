@@ -95,7 +95,7 @@ export function generateRealEstateAgentSchema() {
     logo: `${BASE_URL}/images/dr-jan-duffy.jpg`,
     image: `${BASE_URL}/images/dr-jan-duffy.jpg`,
     description: siteConfig.description,
-    telephone: "+1-702-500-1942",
+    telephone: "+1-702-222-1964",
     email: agentInfo.email,
     priceRange: "$385K - $10M+",
     address: {
@@ -278,52 +278,6 @@ export function generateFAQSchema(faqs: FAQItem[]) {
         "@type": "Answer",
         text: faq.answer,
       },
-    })),
-  };
-}
-
-/**
- * Generate AggregateRating schema
- */
-export function generateAggregateRatingSchema(
-  ratingValue: number,
-  reviewCount: number,
-  bestRating = 5,
-  worstRating = 1,
-) {
-  return {
-    "@type": "AggregateRating",
-    ratingValue: ratingValue.toString(),
-    reviewCount: reviewCount.toString(),
-    bestRating: bestRating.toString(),
-    worstRating: worstRating.toString(),
-  };
-}
-
-/**
- * Generate Review schema for individual testimonials
- */
-export function generateReviewSchema(reviews: ReviewItem[]) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "@id": `${BASE_URL}#organization`,
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-    review: reviews.map((review) => ({
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: review.author,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.rating.toString(),
-        bestRating: "5",
-        worstRating: "1",
-      },
-      reviewBody: review.reviewBody,
-      datePublished:
-        review.datePublished || new Date().toISOString().split("T")[0],
     })),
   };
 }

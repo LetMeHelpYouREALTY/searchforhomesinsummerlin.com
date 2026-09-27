@@ -44,14 +44,6 @@ export const defaultReviews: Review[] = [
   },
 ];
 
-// Aggregate rating stats
-export const aggregateRating = {
-  ratingValue: 4.9,
-  reviewCount: 500,
-  bestRating: 5,
-  worstRating: 1,
-};
-
 interface ReviewsSectionProps {
   /** Custom reviews to display */
   reviews?: Review[];
@@ -106,29 +98,16 @@ export default function ReviewsSection({
                   )}
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-900" itemProp="author">
+                  <h3 className="font-bold text-slate-900">
                     {review.name}
                   </h3>
                   <p className="text-sm text-slate-600">{review.location}</p>
                 </div>
               </div>
 
-              <div className="flex items-center mb-4" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-                <meta itemProp="ratingValue" content={review.rating.toString()} />
-                <meta itemProp="bestRating" content="5" />
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-5 w-5 ${
-                      i < review.rating ? "text-yellow-400 fill-yellow-400" : "text-slate-300"
-                    }`}
-                  />
-                ))}
-              </div>
-
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 h-8 w-8 text-blue-100" />
-                <p className="text-slate-700 relative z-10 pl-4" itemProp="reviewBody">
+                <p className="text-slate-700 relative z-10 pl-4">
                   {review.text}
                 </p>
               </div>
@@ -153,15 +132,3 @@ export default function ReviewsSection({
   );
 }
 
-/**
- * Helper to convert reviews to schema format for ReviewSchema component
- * Use with: <ReviewSchema reviews={getReviewSchemaData(reviews)} aggregateRating={aggregateRating} />
- */
-export function getReviewSchemaData(reviews: Review[]) {
-  return reviews.map((review) => ({
-    author: review.name,
-    rating: review.rating,
-    text: review.text,
-    date: review.date,
-  }));
-}

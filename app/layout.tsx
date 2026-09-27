@@ -17,15 +17,14 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(siteUrl),
-    title: config.title,
-    description: config.description,
-    keywords: config.keywords,
+    title: {
+      default: config.title,
+      template: "%s",
+    },
     alternates: {
       canonical,
     },
     openGraph: {
-      title: config.title,
-      description: config.description,
       type: "website",
       url: canonical,
     },

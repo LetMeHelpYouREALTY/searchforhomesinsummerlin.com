@@ -6,7 +6,9 @@ import { TrendingUp, TrendingDown, Home, Calendar, DollarSign, BarChart, Phone }
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Real Estate Market Report January 2026 | Berkshire Hathaway HomeServices",
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/market-report" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/market-report" },
+  title: "Las Vegas Real Estate Market Report January 2026 | Dr. Jan Duffy",
   description:
     "Get the latest Las Vegas real estate market statistics for January 2026. Median prices, days on market, inventory levels, and expert analysis from Berkshire Hathaway HomeServices Nevada Properties.",
   keywords: [
@@ -303,11 +305,11 @@ export default function MarketReportPage() {
               Jan Duffy provides free market consultations.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

@@ -484,7 +484,7 @@ jobs:
             - [ ] Code follows project conventions
             - [ ] Tests pass with adequate coverage (80%+)
             - [ ] SEO metadata is present and optimized
-            - [ ] Phone numbers are correct: (702) 500-1942
+            - [ ] Phone numbers are correct: (702) 222-1964
             - [ ] Berkshire Hathaway branding is consistent
             - [ ] Mobile responsive design verified
             - [ ] No console errors

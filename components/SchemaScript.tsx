@@ -96,61 +96,9 @@ export function FAQSchema({
   return <SchemaScript schema={schema} id="faq-schema" />;
 }
 
-/**
- * Helper component for Review/Rating schema
- * Used on pages with testimonials
- */
-export function ReviewSchema({
-  reviews,
-  aggregateRating,
-}: {
-  reviews?: Array<{
-    author: string;
-    rating: number;
-    text: string;
-    date?: string;
-  }>;
-  aggregateRating?: {
-    ratingValue: number;
-    reviewCount: number;
-  };
-}) {
-  const schema: Record<string, unknown> = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "@id": "https://heyberkshire.com#organization",
-    name: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
-  };
-
-  if (aggregateRating) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: aggregateRating.ratingValue.toString(),
-      reviewCount: aggregateRating.reviewCount.toString(),
-      bestRating: "5",
-      worstRating: "1",
-    };
-  }
-
-  if (reviews && reviews.length > 0) {
-    schema.review = reviews.map((review) => ({
-      "@type": "Review",
-      author: {
-        "@type": "Person",
-        name: review.author,
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.rating.toString(),
-        bestRating: "5",
-        worstRating: "1",
-      },
-      reviewBody: review.text,
-      datePublished: review.date || new Date().toISOString().split("T")[0],
-    }));
-  }
-
-  return <SchemaScript schema={schema} id="review-schema" />;
+/** @deprecated Review/rating JSON-LD removed sitewide (no AggregateRating). */
+export function ReviewSchema() {
+  return null;
 }
 
 /**

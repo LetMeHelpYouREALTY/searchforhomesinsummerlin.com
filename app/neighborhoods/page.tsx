@@ -6,7 +6,9 @@ import { MapPin, Phone, Home, Users, GraduationCap } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Neighborhoods | Berkshire Hathaway HomeServices",
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/neighborhoods" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/neighborhoods" },
+  title: "Las Vegas Neighborhoods | Dr. Jan Duffy",
   description:
     "Explore Las Vegas and Henderson neighborhoods with Dr. Jan Duffy at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, The Ridges, Southern Highlands & more.",
   keywords: [
@@ -222,11 +224,11 @@ export default function NeighborhoodsPage() {
               neighborhood recommendations.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

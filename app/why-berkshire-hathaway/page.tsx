@@ -6,6 +6,8 @@ import { Shield, Users, Globe, Award, TrendingUp, CheckCircle, Phone } from "luc
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/why-berkshire-hathaway" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/why-berkshire-hathaway" },
   title: "Why Choose Berkshire Hathaway HomeServices | Las Vegas Real Estate",
   description:
     "Discover why Berkshire Hathaway HomeServices is the most trusted name in real estate. Backed by Warren Buffett, with 50,000+ agents worldwide. Work with BHHS Nevada Properties today.",
@@ -24,7 +26,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Berkshire Hathaway HomeServices",
   url: "https://www.bhhs.com",
-  logo: "https://heyberkshire.com/favicon-32x32.png",
+  logo: "https://searchforhomesinsummerlin.com/favicon-32x32.png",
   description:
     "Berkshire Hathaway HomeServices is a real estate brokerage network, part of Berkshire Hathaway Inc., one of the world's most respected and trusted companies.",
   parentOrganization: {
@@ -274,11 +276,11 @@ export default function WhyBerkshireHathawayPage() {
               Ready to work with the most trusted name in real estate? Contact Dr. Jan Duffy today.
             </p>
             <a
-              href="tel:+17025001942"
+              href="tel:+17022221964"
               className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-md font-bold text-lg transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 500-1942
+              Call (702) 222-1964
             </a>
             <p className="mt-4 text-slate-400 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/security-policy" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/security-policy" },
   title: 'Security Policy',
-  description: 'Security policy and responsible disclosure information for heyberkshire.com',
+  description: 'Security policy and responsible disclosure information for searchforhomesinsummerlin.com',
   robots: {
     index: true,
     follow: true,
@@ -47,14 +49,14 @@ export default function SecurityPolicyPage() {
               <ul className="space-y-2 text-blue-800">
                 <li>
                   <strong>Email:</strong>{' '}
-                  <a href="mailto:security@heyberkshire.com" className="underline">
-                    security@heyberkshire.com
+                  <a href="mailto:security@searchforhomesinsummerlin.com" className="underline">
+                    security@searchforhomesinsummerlin.com
                   </a>
                 </li>
                 <li>
                   <strong>Phone:</strong>{' '}
-                  <a href="tel:+17025001942" className="underline">
-                    (702) 500-1942
+                  <a href="tel:+17022221964" className="underline">
+                    (702) 222-1964
                   </a>
                 </li>
                 <li>
@@ -220,7 +222,7 @@ export default function SecurityPolicyPage() {
               To protect your information when using our site:
             </p>
             <ul className="list-disc pl-6 text-gray-700 space-y-2">
-              <li>Ensure you're on the correct domain: <strong>heyberkshire.com</strong></li>
+              <li>Ensure you're on the correct domain: <strong>searchforhomesinsummerlin.com</strong></li>
               <li>Look for the padlock icon (HTTPS)</li>
               <li>Don't share sensitive information via email</li>
               <li>Use strong, unique passwords if creating an account</li>
@@ -246,14 +248,14 @@ export default function SecurityPolicyPage() {
               </p>
               <p className="mb-2">
                 Email:{' '}
-                <a href="mailto:info@heyberkshire.com" className="text-blue-600 underline">
-                  info@heyberkshire.com
+                <a href="mailto:info@searchforhomesinsummerlin.com" className="text-blue-600 underline">
+                  info@searchforhomesinsummerlin.com
                 </a>
               </p>
               <p>
                 Phone:{' '}
-                <a href="tel:+17025001942" className="text-blue-600 underline">
-                  (702) 500-1942
+                <a href="tel:+17022221964" className="text-blue-600 underline">
+                  (702) 222-1964
                 </a>
               </p>
             </div>

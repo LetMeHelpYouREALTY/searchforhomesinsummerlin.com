@@ -11,7 +11,11 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { FollowUpBossClient } from '@/lib/fub/client';
+import { getFubApiKey, getFubSystemKey } from '@/lib/fub/credentials';
 import { leadFormLimiter, getClientId, checkRateLimit, getRateLimitHeaders } from '@/lib/rate-limit';
+import { SITE_DOMAIN } from '@/lib/domain-config';
+
+const LEAD_SOURCE_DOMAIN = SITE_DOMAIN;
 
 export interface LeadCaptureRequest {
   // Required
@@ -132,10 +136,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Initialize FUB client
+    const apiKey = getFubApiKey();
+    if (!apiKey) {
+      console.error('[Lead Capture] Missing FOLLOW_UP_BOSS_API_KEY / FUB_API_KEY');
+      return NextResponse.json(
+        { error: 'Unable to submit at this time. Please call or text (702) 222-1964.' },
+        { status: 500 }
+      );
+    }
+
     const fub = new FollowUpBossClient({
-      apiKey: process.env.FUB_API_KEY || '',
-      systemKey: process.env.FUB_SYSTEM_KEY,
+      apiKey,
+      systemKey: getFubSystemKey(),
     });
 
     // Check for existing lead (deduplication)
@@ -238,10 +250,7 @@ export async function POST(request: NextRequest) {
     console.error('[Lead Capture] Error:', error);
     
     return NextResponse.json(
-      { 
-        error: 'Failed to capture lead',
-        details: error instanceof Error ? error.message : 'Unknown error',
-      },
+      { error: 'Unable to submit at this time. Please try again later.' },
       { status: 500 }
     );
   }
@@ -267,7 +276,7 @@ function enrichSource(source: string | undefined, request: NextRequest): string 
   if (referrer) {
     try {
       const refUrl = new URL(referrer);
-      if (!refUrl.hostname.includes('heyberkshire.com')) {
+      if (!refUrl.hostname.includes(LEAD_SOURCE_DOMAIN)) {
         return `referral/${refUrl.hostname}`;
       }
     } catch (e) {
@@ -275,7 +284,7 @@ function enrichSource(source: string | undefined, request: NextRequest): string 
     }
   }
 
-  return source || 'website/direct';
+  return source || LEAD_SOURCE_DOMAIN;
 }
 
 /**

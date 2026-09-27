@@ -27,9 +27,10 @@ import {
 } from "@/lib/gbp-schema";
 
 export const metadata: Metadata = {
-  title: "Dr. Jan Duffy, REALTOR® Las Vegas | Berkshire Hathaway HomeServices",
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/google-business" },
+  title: "Dr. Jan Duffy, REALTOR® Las Vegas | Dr. Jan Duffy",
   description:
-    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 500-1942.",
+    "Dr. Jan Duffy is a trusted Las Vegas REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Specializing in Summerlin, Henderson, 55+ communities, California relocation, and luxury homes. Call (702) 222-1964.",
   keywords: [
     "Dr. Jan Duffy realtor",
     "Las Vegas real estate agent",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
     "California relocation Las Vegas",
   ],
   openGraph: {
-    title: "Dr. Jan Duffy - Berkshire Hathaway HomeServices Nevada Properties",
+    title: "Dr. Jan Duffy, REALTOR® | Summerlin Homes",
     description: "Trusted Las Vegas REALTOR® serving since 2008. Summerlin, Henderson, luxury homes, 55+ communities.",
-    url: "https://heyberkshire.com/google-business",
+    url: "https://searchforhomesinsummerlin.com/google-business",
     type: "profile",
   },
 };

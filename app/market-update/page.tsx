@@ -16,9 +16,11 @@ import {
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Berkshire Hathaway HomeServices Las Vegas Market Update | January 2026",
+  alternates: { canonical: "https://searchforhomesinsummerlin.com/market-update" },
+  openGraph: { url: "https://searchforhomesinsummerlin.com/market-update" },
+  title: "Las Vegas Market Update | January 2026 | Dr. Jan Duffy",
   description:
-    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 500-1942.",
+    "Weekly Las Vegas real estate market update from Berkshire Hathaway HomeServices Nevada Properties. Get the latest stats, notable sales, and expert analysis from Dr. Jan Duffy. Call (702) 222-1964.",
   keywords: [
     "Berkshire Hathaway HomeServices Las Vegas market update",
     "Las Vegas real estate market",
@@ -48,7 +50,7 @@ const articleSchema = {
   publisher: {
     "@type": "Organization",
     name: "Berkshire Hathaway HomeServices Nevada Properties",
-    url: "https://heyberkshire.com",
+    url: "https://searchforhomesinsummerlin.com",
   },
 };
 
@@ -225,7 +227,7 @@ export default function MarketUpdatePage() {
                 <div>
                   <div className="font-bold text-slate-900">Dr. Jan Duffy</div>
                   <div className="text-slate-500 text-sm">
-                    REALTOR® | Berkshire Hathaway HomeServices Nevada Properties
+                    REALTOR® | Dr. Jan Duffy
                   </div>
                 </div>
               </div>
@@ -386,11 +388,11 @@ export default function MarketUpdatePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17025001942"
+                href="tel:+17022221964"
                 className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 500-1942
+                Call (702) 222-1964
               </a>
               <Link
                 href="/home-valuation"
