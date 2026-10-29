@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: { url: "https://searchforhomesinsummerlin.com/neighborhoods/the-ridges" },
   title: "The Ridges | Las Vegas Luxury Real Estate | Dr. Jan Duffy",
   description:
-    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 222-1964.",
+    "Find luxury homes in The Ridges with Berkshire Hathaway HomeServices Nevada Properties. Dr. Jan Duffy specializes in Summerlin's most exclusive guard-gated community. Median price $2.5M. Call (702) 500-1955.",
   keywords: [
     "Berkshire Hathaway HomeServices The Ridges",
     "The Ridges homes for sale",
@@ -376,11 +376,11 @@ export default function TheRidgesPage() {
               in Las Vegas's most prestigious community.
             </p>
             <a
-              href="tel:+17022221964"
+              href="tel:+17025001955"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 222-1964
+              Call (702) 500-1955
             </a>
             <p className="mt-4 text-blue-200 text-sm">
               Berkshire Hathaway HomeServices Nevada Properties
