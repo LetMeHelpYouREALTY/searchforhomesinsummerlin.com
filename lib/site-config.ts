@@ -100,19 +100,19 @@ export const neighborhoods = [
     name: "Summerlin",
     slug: "summerlin",
     description:
-      "Master-planned community with parks, trails, and top-rated schools",
+      "Master-planned community with parks, trails, and nearby public schools",
     medianPrice: "$625,000",
-    highlights: ["Red Rock views", "150+ parks", "Top schools", "Golf courses"],
+    highlights: ["Red Rock views", "150+ parks", "Nearby public schools", "Golf courses"],
   },
   {
     name: "Henderson",
     slug: "henderson",
     description:
-      "Nevada's second-largest city with family-friendly neighborhoods",
+      "Nevada's second-largest city with master-planned neighborhoods",
     medianPrice: "$485,000",
     highlights: [
-      "Low crime rate",
-      "Excellent schools",
+      "Public crime data online",
+      "Nearby public schools",
       "Lake Las Vegas",
       "Green Valley",
     ],
@@ -157,7 +157,7 @@ export const neighborhoods = [
       "New construction",
       "Affordable",
       "Growing area",
-      "Family-friendly",
+      "Parks nearby",
     ],
   },
   {
@@ -169,7 +169,7 @@ export const neighborhoods = [
       "New homes",
       "Mountain views",
       "Modern amenities",
-      "Great schools",
+      "Nearby public schools",
     ],
   },
   {
@@ -177,7 +177,7 @@ export const neighborhoods = [
     slug: "centennial-hills",
     description: "Northwest Las Vegas community with mountain proximity",
     medianPrice: "$495,000",
-    highlights: ["Mountain access", "Parks", "Shopping", "Family-friendly"],
+    highlights: ["Mountain access", "Parks", "Shopping"],
   },
   {
     name: "Inspirada",
@@ -188,7 +188,7 @@ export const neighborhoods = [
       "Resort pools",
       "Walking trails",
       "New construction",
-      "Great schools",
+      "Nearby public schools",
     ],
   },
   {
