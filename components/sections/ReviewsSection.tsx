@@ -79,8 +79,6 @@ export default function ReviewsSection({
             <div
               key={review.id}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-              itemScope
-              itemType="https://schema.org/Review"
             >
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4 flex-shrink-0">
