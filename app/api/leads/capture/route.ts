@@ -140,7 +140,7 @@ export async function POST(request: NextRequest) {
     if (!apiKey) {
       console.error('[Lead Capture] Missing FOLLOW_UP_BOSS_API_KEY / FUB_API_KEY');
       return NextResponse.json(
-        { error: 'Unable to submit at this time. Please call or text (702) 222-1964.' },
+        { error: 'Unable to submit at this time. Please call or text (702) 500-1955.' },
         { status: 500 }
       );
     }

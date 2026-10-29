@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: { url: "https://searchforhomesinsummerlin.com/55-plus-communities/sun-city-summerlin" },
   title: "Sun City Summerlin Homes for Sale | Dr. Jan Duffy",
   description:
-    "Nevada's largest 55+ community. Sun City Summerlin homes from $320K-$850K. 3 golf courses, 4 rec centers, 100+ clubs. Dr. Jan Duffy, BHHS specialist. Call (702) 222-1964.",
+    "Nevada's largest 55+ community. Sun City Summerlin homes from $320K-$850K. 3 golf courses, 4 rec centers, 100+ clubs. Dr. Jan Duffy, BHHS specialist. Call (702) 500-1955.",
   keywords: [
     "Sun City Summerlin homes for sale",
     "Sun City Summerlin Las Vegas",
@@ -295,11 +295,11 @@ export default function SunCitySummerlinPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+17022221964"
+                href="tel:+17025001955"
                 className="inline-flex items-center justify-center bg-white text-amber-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-amber-50 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 222-1964
+                Call (702) 500-1955
               </a>
               <Link
                 href="/contact"

@@ -15,6 +15,6 @@ export const GLOBAL_HERO: GlobalHeroConfig = {
   src: "/Image/hero_bg_1.jpg",
   alt: "Summerlin area homes and desert landscape near Las Vegas, Nevada",
   tagline: "Summerlin homes for sale — search by village with Dr. Jan Duffy",
-  phoneDisplay: "(702) 222-1964",
-  phoneTel: "tel:+17022221964",
+  phoneDisplay: "(702) 500-1955",
+  phoneTel: "tel:+17025001955",
 };
