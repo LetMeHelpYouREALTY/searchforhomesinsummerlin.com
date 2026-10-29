@@ -102,7 +102,7 @@ export default function LuxuryHomesPage() {
               className="inline-flex items-center bg-slate-900 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-slate-800 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Schedule a Private Preview → (702) 500-1955
+              Schedule a Private Preview → (702) 222-1964
             </a>
           </div>
 
