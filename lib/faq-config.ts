@@ -34,7 +34,7 @@ export const FAQ_BY_PAGE_TYPE: Record<string, FAQ[]> = {
     { question: "Are luxury homes in Las Vegas a good investment?",
       answer: "Guard-gated communities like The Ridges and MacDonald Highlands have appreciated 40–60% over the past five years. Las Vegas luxury benefits from no state income tax, which attracts high-net-worth buyers from California, New York, and internationally — supporting long-term demand." },
     { question: "How discreet is the buying process for high-value properties?",
-      answer: "Very. Dr. Jan regularly handles off-market transactions and can structure showings privately. Many luxury listings in Las Vegas never appear on the public MLS — call 702-222-1964 for confidential access." },
+      answer: "Very. Dr. Jan regularly handles off-market transactions and can structure showings privately. Many luxury listings in Las Vegas never appear on the public MLS — call 702-500-1955 for confidential access." },
     { question: "What financing options exist for luxury properties?",
       answer: "Jumbo loans, portfolio lending, and cash purchases are all common in the luxury segment. Dr. Jan works with specialized luxury mortgage advisors who understand high-value transactions and can close quickly without disrupting your privacy." },
     { question: "How long do luxury homes typically take to sell?",
