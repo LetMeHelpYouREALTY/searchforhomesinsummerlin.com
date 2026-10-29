@@ -9,7 +9,7 @@ import Script from "next/script";
 import GlobalHeroBanner from "@/components/layout/GlobalHeroBanner";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const headersList = headers();
+  const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "/";
   const siteUrl = getSiteUrl();
   const canonical = absoluteUrl(pathname);
