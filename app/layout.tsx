@@ -7,6 +7,7 @@ import { absoluteUrl, getSiteUrl } from "@/lib/site-url";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import GlobalHeroBanner from "@/components/layout/GlobalHeroBanner";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
@@ -54,6 +55,7 @@ export default function RootLayout({
         <GlobalHeroBanner />
         {children}
         <Analytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
